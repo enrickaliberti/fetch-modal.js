@@ -189,7 +189,7 @@ class FetchModal {
                 tempDiv.innerHTML = text;
                 const contentElement = tempDiv.querySelector(`#${targetId}`);
                 if (contentElement) {
-                    content = TemplateEngine.render(contentElement.innerHTML, {});
+                    content = contentElement.innerHTML;
                     this.cache.set(url + targetId, content);
                 } else {
                     throw new Error('Elemento non trovato.');
